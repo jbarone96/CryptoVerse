@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600;700;800&display=swap");
+// ^^^ UPDATE FONT ^^^
+:root {
+  --c-light: #f1f1f1;
+  --c-gray: #999;
+  --radius: 6px;
+  --font-family: "Dosis", "Arial", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  line-height: 1.5;
+  font-family: "Dosis";
+  letter-spacing: 0.2px;
+}
+
+.section {
+  &-gap {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+  &-title {
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.form-control {
+  font-size: 14px !important;
+  border-color: var(--c-light) !important;
+}
+
+.text-gray {
+  color: var(--c-gray);
+}
+
+.modal-backdrop {
+  opacity: 1 !important;
+  background-color: rgba($color: #000000, $alpha: 0.4) !important;
+  backdrop-filter: blur(3px);
+  &.show {
+    opacity: 1 !important;
+  }
+}
+
+.color {
+  &--up {
+    color: green;
+  }
+  &--down {
+    color: red;
+  }
+}
+
+.customTable {
+  --bs-table-hover-bg: #fff;
+  font-size: 14px;
+  border: 1px solid var(--c-light);
+  border-radius: var(--radius);
+  td,
+  th {
+    padding: 10px 14px;
+    border-color: var(--c-light);
+  }
+
+  td {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+
+  > tbody > tr:hover {
+    box-shadow: 0 6px 20px rgba($color: #000000, $alpha: 0.1);
+    cursor: pointer;
+  }
+}
